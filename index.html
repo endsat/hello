@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ends.at – Simple and Flexible URL Redirects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            color: #333;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            font-weight: 900;
+        }
+        .icon {
+            color: #ff6600;
+            margin-right: 10px;
+        }
+        .step {
+            margin: 20px 0;
+            padding: 15px;
+            background: #fff3e0;
+            border-radius: 8px;
+        }
+        a {
+            color: #ff6600;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fa-solid fa-link icon"></i>ends.at – Simple and Flexible URL Redirects</h1>
+        
+        <h2><i class="fa-solid fa-rocket icon"></i> What is ends.at?</h2>
+        <p><strong>ends.at</strong> provides a quick and easy way to create a short, custom URL that redirects to any link of your choice and lots of shortlinks. No need for complex setups—just a <strong>GitHub account</strong> and a simple text file.</p>
+
+        <h2><i class="fa-solid fa-bolt icon"></i> Get Started in 3 Simple Steps</h2>
+
+        <div class="step">
+            <h3><i class="fa-solid fa-1 icon"></i> Set Up Your GitHub Repository</h3>
+            <p>If you don’t have a GitHub account, <a href="https://github.com/signup">create one here</a>.</p>
+            <p>Click this link to automatically create the necessary repository and file: <a href="https://github.com/new?template_name=endsat&template_owner=endsat&name=endsat">Create Repository with Template</a></p>
+            <p>Ensure your repository is <strong>public</strong> so the redirect service can access it.</p>
+        </div>
+        
+        <div class="step">
+            <h3><i class="fa-solid fa-2 icon"></i> Add Your Redirect URL</h3>
+            <p>Open the <code>endsat.txt</code> file in your new repository.</p>
+            <p>Replace <code>https://example.com</code> with the URL you want to redirect to (and other short links too).</p>
+            <p>Click <strong>Commit changes</strong> to save.</p>
+        </div>
+        
+        <div class="step">
+            <h3><i class="fa-solid fa-3 icon"></i> Test Your Redirect</h3>
+            <p>Go to: <code>https://ends.at/your-github-username</code> (may take a minute to update each time you save the file)</p>
+            <p>If everything is configured correctly, you will be redirected immediately.</p>
+        </div>
+        
+        <h2><i class="fa-solid fa-trophy icon"></i> Why Choose ends.at?</h2>
+        <ul style="text-align: left; display: inline-block;">
+            <li><i class="fa-solid fa-check icon"></i> <strong>Easy Setup</strong> – No backend, no coding—just GitHub.</li>
+            <li><i class="fa-solid fa-check icon"></i> <strong>Full Control</strong> – Update your redirect anytime by editing <code>endsat.txt</code>.</li>
+            <li><i class="fa-solid fa-check icon"></i> <strong>Universal Compatibility</strong> – Works with any valid URL.</li>
+            <li><i class="fa-solid fa-check icon"></i> <strong>Fast Performance</strong> – Uses GitHub’s raw file service for quick lookups and Cloudflare Workers behind the scenes.</li>
+            <li><i class="fa-solid fa-check icon"></i> <strong>Your links aren’t tracked</strong></li>
+            <li><i class="fa-solid fa-check icon"></i> <strong>It’s free</strong></li>
+        </ul>
+        
+        <h2><i class="fa-solid fa-question-circle icon"></i> Troubleshooting</h2>
+        <ul style="text-align: left; display: inline-block;">
+            <li><i class="fa-solid fa-bug icon"></i> <strong>404 Error?</strong> → Ensure your repository is public and contains <code>endsat.txt</code>.</li>
+            <li><i class="fa-solid fa-bug icon"></i> <strong>Seeing an Old URL?</strong> → GitHub caches raw files. Add <code>?timestamp=12345</code> to force refresh.</li>
+        </ul>
+        
+        <h2><i class="fa-solid fa-info-circle icon"></i> FYI</h2>
+        <p>URLs don’t need to start with <code>http://</code> or <code>https://</code>.</p>
+        
+        <h2><i class="fa-solid fa-envelope icon"></i> Want to say hello?</h2>
+        <p>Send a message to <strong>hello [at] ends.at</strong></p>
+    </div>
+
+    <script>
+        gsap.from(".container", { opacity: 0, y: 50, duration: 1 });
+        gsap.from("h1", { opacity: 0, x: -50, duration: 1, delay: 0.2 });
+        gsap.from(".step", { opacity: 0, scale: 0.9, duration: 0.8, stagger: 0.3, delay: 0.4 });
+    </script>
+</body>
+</html>
